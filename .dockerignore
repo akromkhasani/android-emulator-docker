@@ -1,11 +1,7 @@
 .github
-README.md
-allure-results
-coverage
+.dockerignore
 .gitignore
 docker-compose.yml
-Jenkinsfile
-useful
 Dockerfile
-test-compose.yml
-allure_service.sh
+LICENSE
+README.md

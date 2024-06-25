@@ -30,7 +30,7 @@ Down below is the list of the main scripts to launch the relevant service, certa
 
 2.  **Start your container:**
 
-        docker run --privileged -it -d -p 4723:4723 -p 5900:5900 --name android-container android-emulator
+        docker run --privileged -it -d -p 4723:4723 --name android-container android-emulator
 
 3.  **Start the emulator in headless mode :**
 
@@ -45,7 +45,7 @@ Down below is the list of the main scripts to launch the relevant service, certa
 
 1.  **The following command must be used to initiate the Docker container:**
 
-        docker run --privileged -it -d -p 4723:4723 -p 5900:5900 -e VNC_PASSWORD=password --name android-container android-emulator
+        docker run --privileged -it -d -p 5900:5900 -e VNC_PASSWORD=password --name android-container android-emulator
 
 2.  **Instantiate the VNC service by running:**
 

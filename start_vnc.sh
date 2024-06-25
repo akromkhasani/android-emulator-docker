@@ -11,7 +11,7 @@ main() {
     launch_xvfb
     launch_window_manager
     run_vnc_server
-    printf "${G}==> ${BL}Welcome to android-emulator VNC by amrsa ${G}<==${NC}""\n"
+    printf "${G}==> ${BL}Welcome to android-emulator VNC ${G}<==${NC}""\n"
 }
 
 launch_xvfb() {
@@ -19,7 +19,7 @@ launch_xvfb() {
     export DISPLAY=${XVFB_DISPLAY:-:1}
     local screen=${XVFB_SCREEN:-0}
     local resolution=${XVFB_RESOLUTION:-1280x1024x24}
-    local timeout=${XVFB_TIMEOUT:-5}
+    local timeout=${XVFB_TIMEOUT:-60}
 
     # Start and wait for either Xvfb to be fully up or we hit the timeout.
     Xvfb ${DISPLAY} -screen ${screen} ${resolution} &

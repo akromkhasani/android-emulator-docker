@@ -4,7 +4,7 @@ RUN --mount=target=/var/lib/apt/lists,type=cache,sharing=locked \
     --mount=target=/var/cache/apt,type=cache,sharing=locked \
     rm -f /etc/apt/apt.conf.d/docker-clean && \
     DEBIAN_FRONTEND=noninteractive apt update -q && \
-    DEBIAN_FRONTEND=noninteractive apt install -qy --no-install-recommends curl
+    DEBIAN_FRONTEND=noninteractive apt install -qy curl sudo unzip bzip2 libdrm-dev libxkbcommon-dev libgbm-dev libasound-dev libnss3 libxcursor1 libpulse-dev libxshmfence-dev xauth xvfb x11vnc fluxbox wmctrl libdbus-glib-1-2
 
 RUN --mount=target=/var/lib/apt/lists,type=cache,sharing=locked \
     --mount=target=/var/cache/apt,type=cache,sharing=locked \
@@ -12,7 +12,7 @@ RUN --mount=target=/var/lib/apt/lists,type=cache,sharing=locked \
     rm -f /etc/apt/apt.conf.d/docker-clean && \
     curl -sSL https://deb.nodesource.com/setup_lts.x | bash && \
     DEBIAN_FRONTEND=noninteractive apt update -q && \
-    DEBIAN_FRONTEND=noninteractive apt install -qy --no-install-recommends sudo unzip bzip2 libdrm-dev libxkbcommon-dev libgbm-dev libasound-dev libnss3 libxcursor1 libpulse-dev libxshmfence-dev xauth xvfb x11vnc fluxbox wmctrl libdbus-glib-1-2 nodejs
+    DEBIAN_FRONTEND=noninteractive apt install -qy --no-install-recommends nodejs
 
 #==============================
 # Install Appium

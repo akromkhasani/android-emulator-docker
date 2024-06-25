@@ -3,7 +3,7 @@ version: "3"
 services:
   android-service:
     image: android-emulator
-    command: ./start_emu_headless.sh && ./start_appium.sh
+    command: bash -c './start_emu_headless.sh && ./start_appium.sh'
     ports:
       - 4723:4723
     privileged: true
@@ -12,7 +12,7 @@ services:
 
   # vnc-service:
   #   image: android-emulator
-  #   command: ./start_vnc.sh
+  #   command: bash -c './start_vnc.sh'
   #   environment: 
   #     VNC_PASSWORD: password
   #   ports:

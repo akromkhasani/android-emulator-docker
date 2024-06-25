@@ -58,14 +58,6 @@ RUN chmod a+x start_vnc.sh && \
     chmod a+x start_appium.sh
 
 #===================
-# Aliases
-#===================
-ENV VNC=/start_vnc.sh
-ENV EMU=/start_emu.sh
-ENV EMU_HEADLESS=/start_emu_headless.sh
-ENV APPIUM=/start_appium.sh
-
-#===================
 # Ports
 #===================
 EXPOSE 4723 5900

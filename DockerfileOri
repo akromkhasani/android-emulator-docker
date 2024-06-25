@@ -13,7 +13,7 @@ SHELL ["/bin/bash", "-c"]
 RUN --mount=target=/var/lib/apt/lists,type=cache,sharing=locked \
     --mount=target=/var/cache/apt,type=cache,sharing=locked \
     rm -f /etc/apt/apt.conf.d/docker-clean && \
-    apt update && apt install -y curl sudo wget unzip bzip2 libdrm-dev libxkbcommon-dev libgbm-dev libasound-dev libnss3 libxcursor1 libpulse-dev libxshmfence-dev xauth xvfb x11vnc fluxbox wmctrl libdbus-glib-1-2
+    apt update && apt install -y --no-install-recommends curl sudo wget unzip bzip2 libdrm-dev libxkbcommon-dev libgbm-dev libasound-dev libnss3 libxcursor1 libpulse-dev libxshmfence-dev xauth xvfb x11vnc fluxbox wmctrl libdbus-glib-1-2
 
 #==============================
 # Android SDK ARGS
@@ -69,7 +69,7 @@ RUN --mount=target=/var/lib/apt/lists,type=cache,sharing=locked \
     --mount=target=/root/.npm,type=cache,sharing=locked \
     rm -f /etc/apt/apt.conf.d/docker-clean && \
     curl -sL https://deb.nodesource.com/setup_20.x | bash && \
-    apt-get -qqy install nodejs && \
+    apt-get -qqy install --no-install-recommends nodejs && \
     npm i -g appium --unsafe-perm=true --allow-root && \
     appium driver install uiautomator2 && \
     exit 0

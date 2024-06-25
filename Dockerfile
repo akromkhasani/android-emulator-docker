@@ -35,8 +35,8 @@ ENV PATH "$ANDROID_SDK_ROOT/cmdline-tools/tools/bin:$ANDROID_SDK_ROOT/platform-t
 ARG ANDROID_CMD="commandlinetools-linux-11076708_latest.zip"
 RUN curl -sSL -o /tmp/$ANDROID_CMD https://dl.google.com/android/repository/${ANDROID_CMD} && \
     unzip -d $ANDROID_SDK_ROOT /tmp/$ANDROID_CMD && rm -f /tmp/$ANDROID_CMD && \
-    mkdir -p $ANDROID_SDK_ROOT/cmdline-tools/tools && cd $ANDROID_SDK_ROOT/cmdline-tools && mv bin lib tools/ && \
-    yes Y | sdkmanager --licenses && \
+    mkdir -p $ANDROID_SDK_ROOT/cmdline-tools/tools && cd $ANDROID_SDK_ROOT/cmdline-tools && mv bin lib tools/
+RUN yes Y | sdkmanager --licenses && \
     yes Y | sdkmanager --verbose --no_https "${EMULATOR_PACKAGE}" "platforms;${ANDROID_API_LEVEL}" platform-tools emulator
 
 #============================================

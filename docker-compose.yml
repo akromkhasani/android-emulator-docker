@@ -1,22 +1,30 @@
 version: "3"
 
 services:
-  android-service:
+  # android-service:
+  #   image: android-emulator
+  #   command: bash -c './start_emu_headless.sh && ./start_appium.sh'
+  #   ports:
+  #     - 4723:4723
+  #   volumes:
+  #     - avd-data:/avd
+  #   privileged: true
+  #   tty: true
+  #   stdin_open: true
+
+  vnc-service:
     image: android-emulator
-    command: bash -c './start_emu_headless.sh && ./start_appium.sh'
+    command: bash -c './start_vnc.sh'
+    environment: 
+      VNC_PASSWORD: password
     ports:
-      - 4723:4723
+      - 5900:5900
+    volumes:
+      - avd-data:/avd
     privileged: true
     tty: true
     stdin_open: true
 
-  # vnc-service:
-  #   image: android-emulator
-  #   command: bash -c './start_vnc.sh'
-  #   environment: 
-  #     VNC_PASSWORD: password
-  #   ports:
-  #     - 5900:5900
-  #   privileged: true
-  #   tty: true
-  #   stdin_open: true
+volumes:
+  avd-data:
+    driver: local

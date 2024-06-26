@@ -47,12 +47,6 @@ ENV EMULATOR_DEVICE="pixel_7"
 ENV ANDROID_AVD_HOME=/avd
 VOLUME /avd
 
-#============================================
-# Appium credentials
-#============================================
-ENV APPIUM_BASIC_AUTH_USER=username
-ENV APPIUM_BASIC_AUTH_PASS=password
-
 #=========================
 # Copying Scripts to root
 #=========================

@@ -76,14 +76,12 @@ The Docker Compose file simplifies the process of starting the service. It inclu
 
 **When manually starting the container, ensure to set the necessary environment variables for proper operation**
 
-| Environments           | Description                                                                                              | Required          |  Service   |
-| ---------------------- | -------------------------------------------------------------------------------------------------------- | ----------------- | ---------- |
-| VNC_PASSWORD           | Password needed to connect to VNC Server                                                                 | optional          | VNC        |
-| OSTYPE                 | linux or macos/darwin                                                                                    | optional          | Android    |
-| EMULATOR_TIMEOUT       | emulator booting up timeoue, default 240 second                                                          | optional          | Android    |
-| HW_ACCEL_OVERRIDE      | Pass aceel options e.g "-accel on" or "-aceel off"                                                       | optional          | Android    |
-| APPIUM_BASIC_AUTH_USER | Appium username, default "username"                                                                      | optional          | Android    |
-| APPIUM_BASIC_AUTH_PASS | Appium password, default "password"                                                                      | optional          | Android    |
+| Environments      | Description                                                                                              | Required          |  Service   |
+| ----------------- | -------------------------------------------------------------------------------------------------------- | ----------------- | ---------- |
+| VNC_PASSWORD      | Password needed to connect to VNC Server                                                                 | optional          | VNC        |
+| OSTYPE            | linux or macos/darwin                                                                                    | optional          | Android    |
+| EMULATOR_TIMEOUT  | emulator booting up timeoue, default 240 second                                                          | optional          | Android    |
+| HW_ACCEL_OVERRIDE | Pass aceel options e.g "-accel on" or "-aceel off"                                                       | optional          | Android    |
 
 ## Kill the container
 

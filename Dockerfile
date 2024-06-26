@@ -44,6 +44,7 @@ RUN yes Y | sdkmanager --licenses && \
 #============================================
 ENV EMULATOR_NAME="pixel"
 ENV EMULATOR_DEVICE="pixel_7"
+ENV EMULATOR_PORT="5554"
 ENV ANDROID_AVD_HOME=/avd
 VOLUME /avd
 
